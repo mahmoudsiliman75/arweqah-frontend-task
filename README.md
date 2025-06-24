@@ -1,8 +1,15 @@
-# Nuxt Minimal Starter
+# Front-end Task
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Live Demo
+[Posts](https://arweqah-frontend-task.vercel.app/)
 
-## Setup
+
+## Project Setup
+
+### Prerequisites
+
+- Node.js (v22.11.0)
+- npm (10.9.0)
 
 Make sure to install dependencies:
 
@@ -10,14 +17,6 @@ Make sure to install dependencies:
 # npm
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
@@ -27,15 +26,6 @@ Start the development server on `http://localhost:3000`:
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -45,15 +35,6 @@ Build the application for production:
 ```bash
 # npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
@@ -61,15 +42,32 @@ Locally preview production build:
 ```bash
 # npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Project Structure
+
+.
+├── composables
+│   └── baseUseFetch.ts        # Custom fetch data composable
+├── components
+│   └── PostCard.vue           # Post card component
+├── pages
+│   ├── index.vue              # Main posts page
+│   └── posts
+│       └── [id].vue           # Post detail page
+├── types
+│   ├── pagination.ts          # Type declaration for paginated response
+│   └── posts.ts               # Type declaration for post item
+└── utils
+    └── dateFormatter.ts       # Date formatting utility
+
+## Scroll Detection Mechanism
+
+First before the user navigate away posts page we record and store the last scrolling position
+then when the user get back to posts page we get the stored scroll point and make the page 
+scroll to it
+
+## Bonus Features
+
+- TypeScript
+- Vuetify Integration
