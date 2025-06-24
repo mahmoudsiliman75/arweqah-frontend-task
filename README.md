@@ -46,6 +46,7 @@ npm run preview
 
 ## Project Structure
 
+```plaintext
 .
 ├── composables
 │   └── baseUseFetch.ts        # Custom fetch data composable
@@ -60,6 +61,7 @@ npm run preview
 │   └── posts.ts               # Type declaration for post item
 └── utils
     └── dateFormatter.ts       # Date formatting utility
+```
 
 ## Scroll Detection Mechanism
 
